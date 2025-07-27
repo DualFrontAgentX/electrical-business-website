@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrical Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Your Trusted Electrical Expert</h1>
+        <p>Reliable and professional electrical services for residential and commercial projects.</p>
+        <a class="cta" href="#contact">Get a Free Quote</a>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li>Residential electrical installations</li>
+        <li>Commercial wiring &amp; maintenance</li>
+        <li>Lighting design &amp; installation</li>
+        <li>Electrical repairs &amp; upgrades</li>
+      </ul>
+    </section>
+
+    <!-- Gallery section -->
+    <section id="gallery" class="section">
+      <h2>Project Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Using Unsplash's Source API to fetch random electrical images -->
+        <img src="https://source.unsplash.com/640x480/?electrical,construction" alt="Electrical work example 1">
+        <img src="https://source.unsplash.com/640x480/?electrician" alt="Electrical work example 2">
+        <img src="https://source.unsplash.com/640x480/?wiring" alt="Electrical work example 3">
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="section contact-section">
+      <h2>Contact Us</h2>
+      <p>Call or text us at <a href="tel:+11234567890">+1&nbsp;123&nbsp;456&nbsp;7890</a></p>
+      <p>Email us at <a href="mailto:business@example.com">business@example.com</a></p>
+      <form action="https://formspree.io/f/mayplwry" method="POST" class="contact-form">
+        <label>
+          Name<br>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email<br>
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>
+          Message<br>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Your Electrical Business. All rights reserved.</p>
+  </footer>
+</body>
+</html>
