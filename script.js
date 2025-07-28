@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add(theme);
     });
   });
+
+  // Gallery lightbox functionality
+  const galleryImages = document.querySelectorAll('.gallery-grid img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  // Expose a global function to close the lightbox when clicking outside
+  window.closeLightbox = function() {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  };
 });
 
 // Smooth scroll function used by the hero button
