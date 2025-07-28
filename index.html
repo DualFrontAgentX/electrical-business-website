@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electrical Services</title>
+  <title>Dad's Electrical Services</title>
+  <!-- Link to the main stylesheet; matches the repository's expected filename -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme1">
   <header>
     <nav class="navbar">
-      <ul class="nav-list">
+      <div class="logo">Dad's Electrical</div>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -18,63 +21,83 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Hero section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Your Trusted Electrical Expert</h1>
-        <p>Reliable and professional electrical services for residential and commercial projects.</p>
-        <a class="cta" href="#contact">Get a Free Quote</a>
+  <!-- Hero section -->
+  <section id="home" class="hero">
+    <img src="hero.jpg" alt="Hero image" class="hero-bg">
+    <div class="hero-content">
+      <h1>Reliable Electrical Solutions</h1>
+      <p>Powering homes and businesses with quality workmanship.</p>
+      <button onclick="scrollToSection('#contact')">Get in Touch</button>
+    </div>
+  </section>
+
+  <!-- Color palette selector -->
+  <section id="colors" class="color-swatches">
+    <h2>Choose a color scheme</h2>
+    <div class="swatches">
+      <!-- Swatch buttons previewing themes. Each button uses inline styles to preview its colors -->
+      <button class="swatch" data-theme="theme1" title="Theme 1"
+              style="background: linear-gradient(45deg, #FFC107, #89CFF0);"></button>
+      <button class="swatch" data-theme="theme2" title="Theme 2"
+              style="background: linear-gradient(45deg, #FF9800, #A3D2FF);"></button>
+      <button class="swatch" data-theme="theme3" title="Theme 3"
+              style="background: linear-gradient(45deg, #FDD835, #EF6C00);"></button>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>With years of experience in electrical contracting, Dad's Electrical provides professional and reliable services for residential and commercial clients. We value safety, quality, and customer satisfaction.</p>
+  </section>
+
+  <!-- Services section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <h3>Wiring &amp; Rewiring</h3>
+        <p>Complete wiring solutions for new builds and renovations.</p>
       </div>
-    </section>
-
-    <!-- Services section -->
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <ul class="services-list">
-        <li>Residential electrical installations</li>
-        <li>Commercial wiring &amp; maintenance</li>
-        <li>Lighting design &amp; installation</li>
-        <li>Electrical repairs &amp; upgrades</li>
-      </ul>
-    </section>
-
-    <!-- Gallery section -->
-    <section id="gallery" class="section">
-      <h2>Project Gallery</h2>
-      <div class="gallery-grid">
-        <!-- Using Unsplash's Source API to fetch random electrical images -->
-        <img src="https://source.unsplash.com/640x480/?electrical,construction" alt="Electrical work example 1">
-        <img src="https://source.unsplash.com/640x480/?electrician" alt="Electrical work example 2">
-        <img src="https://source.unsplash.com/640x480/?wiring" alt="Electrical work example 3">
+      <div class="service-item">
+        <h3>Lighting</h3>
+        <p>Design and installation of indoor and outdoor lighting.</p>
       </div>
-    </section>
+      <div class="service-item">
+        <h3>Maintenance</h3>
+        <p>Routine inspections and repairs to keep your systems safe.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact section -->
-    <section id="contact" class="section contact-section">
-      <h2>Contact Us</h2>
-      <p>Call or text us at <a href="tel:+11234567890">+1&nbsp;123&nbsp;456&nbsp;7890</a></p>
-      <p>Email us at <a href="mailto:business@example.com">business@example.com</a></p>
-      <form action="https://formspree.io/f/mayplwry" method="POST" class="contact-form">
-        <label>
-          Name<br>
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email<br>
-          <input type="email" name="_replyto" required>
-        </label>
-        <label>
-          Message<br>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+  <!-- Gallery section -->
+  <section id="gallery" class="gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+      <img src="gallery1.jpg" alt="Electric project image 1">
+      <img src="gallery2.jpg" alt="Electric project image 2">
+    </div>
+    <p class="gallery-note">Replace these images with your own project photos to showcase your work.</p>
+  </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Your Electrical Business. All rights reserved.</p>
+  <!-- Contact section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:example@example.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dad's Electrical Services. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
