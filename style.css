@@ -40,6 +40,36 @@ body.theme3 {
   --text-color: #333333;
 }
 
+/* New theme 4: dark gold theme */
+body.theme4 {
+  --primary-color: #FFD700;     /* gold */
+  --secondary-color: #333333;   /* dark grey */
+  --accent-color: #FFA726;      /* warm orange accent */
+  --background-color: #000000;  /* black background for dramatic contrast */
+  --text-color: #F5F5F5;        /* light grey text */
+}
+
+/* New theme 5: soft pastel theme */
+body.theme5 {
+  --primary-color: #FFF9C4;     /* pastel yellow */
+  --secondary-color: #B3E5FC;   /* pastel blue */
+  --accent-color: #FFE0B2;      /* pastel orange */
+  --background-color: #FFFFFF;  /* white background */
+  --text-color: #333333;        /* dark grey text */
+}
+
+/* Logo image style */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
 /* Global resets */
 * {
   box-sizing: border-box;

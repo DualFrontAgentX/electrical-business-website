@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     swatch.addEventListener('click', () => {
       const theme = swatch.dataset.theme;
       // Remove existing theme classes from body
-      document.body.classList.remove('theme1', 'theme2', 'theme3');
+      document.body.classList.remove('theme1', 'theme2', 'theme3', 'theme4', 'theme5');
       // Add the selected theme
       document.body.classList.add(theme);
     });
